@@ -42,7 +42,7 @@ console.log(another_array.flat(Infinity)); //flattening the array to remove nest
 
 console.log(Array.isArray('srk'));
 console.log(Array.isArray(marvel_heroes)); //checking if marvel_heroes is an array
-console.log(Array.from('hello')); //converting a string to an array
+console.log(Array.from('helldo')); //converting a string to an array
 console.log(Array.from({name:"John", age: 30})); //converting an object to an array
 
 let s1=100;
