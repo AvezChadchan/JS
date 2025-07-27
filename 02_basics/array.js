@@ -1,19 +1,19 @@
 // const myarr= [1, 2, 3, 4, 5,6,7];
-// // console.log(myarr[0]);
-// // myarr.push(6);
-// // myarr.push(7); //adding elements at the end
-// // console.log(myarr);
+// console.log(myarr[0]);
+// myarr.push(6);
+// myarr.push(7); //adding elements at the end
+// console.log(myarr);
 
-// // myarr.pop(); //removing the last element
-// // console.log(myarr);
+// myarr.pop(); //removing the last element
+// console.log(myarr);
 
-// // myarr.shift(); //removing the first element
-// // console.log(myarr);
-// // myarr.unshift(0); //adding an element at the beginning
-// // console.log(myarr);
+// myarr.shift(); //removing the first element
+// console.log(myarr);
+// myarr.unshift(0); //adding an element at the beginning
+// console.log(myarr);
 
-// // console.log(myarr.includes(3)); //checking if an element exists
-// // console.log(myarr.indexOf(3)); //finding the index of an element
+// console.log(myarr.includes(3)); //checking if an element exists
+// console.log(myarr.indexOf(3)); //finding the index of an element
 
 // console.log("a: "+myarr);
 // const newarr = myarr.slice(1, 4); //slicing the array from index 1 to 3
