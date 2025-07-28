@@ -60,3 +60,9 @@ const obj3 = {...obj1, ...obj2}; // Merging two objects using spread
 console.log(obj3); // Logging the merged object
 
 console.log(newuser.hasOwnProperty('email')); // Checking if the property exists in the object
+
+//object destructure
+const {email:mymail} = newuser;
+// console.log(newuser.email);
+
+console.log(mymail);
