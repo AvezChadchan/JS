@@ -7,7 +7,7 @@
 })(); //used to execute the fucntion immediately without calling from outside 
 
 (() => {  //unnamed iife
-    console.log("DB COnnected");
+    console.log("DB Connected");
 }
 )();
 
