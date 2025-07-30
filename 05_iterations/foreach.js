@@ -1,3 +1,4 @@
+//foreach doesn't return anything/any value  //use filter to get any values
 const arr = ['java', 'cpp', 'js', 'ruby', 'dart', 'python']
 
 // arr.forEach(function (item){
