@@ -29,3 +29,4 @@ buttons.forEach(function (btn) {
   });
 });
 ```
+## Project 2: Coming Soon
