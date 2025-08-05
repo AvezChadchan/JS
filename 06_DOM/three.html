@@ -3,26 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chai aur js[DOM]</title>
+    <title> aur js[DOM]</title>
 </head>
 <body style="background-color: #212121;color: white;">
 </body>
 <script>
     //creating element in script
-    const mydiv= document.createElement('div'); //creating
+    const mydiv = document.createElement('div'); //creating
     console.log(mydiv);
-    mydiv.className='main'; //setting classname
-    mydiv.id=Math.round(Math.random()*10+1);
-    mydiv.setAttribute('title','hi')
-    mydiv.style.background='red';
-    // mydiv.innerHTML='hello srk';
+    mydiv.className = 'main'; //setting classname
+    mydiv.id = Math.round(Math.random() * 10 + 1);
+    mydiv.setAttribute('title', 'hi')
+    mydiv.style.background = 'red';
+    // mydiv.innerHTML='hello srk'; 
     //appending text to the div
-    const addText = document.createTextNode('hello');
+    const addText = document.createTextNode('No one just me & my Loneliness');
     mydiv.appendChild(addText);
     document.body.appendChild(mydiv);  //appending the div to the screen
 </script>
-
-
-
-
 </html>
