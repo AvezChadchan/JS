@@ -70,3 +70,18 @@ It then checks if the values are valid (not empty and a positive number) and cal
 If the BMI is high, it displays a message saying the user is overweight. If the BMI is
 low, it displays a message saying the user is underweight. Otherwise, it displays a message saying
 the user has a normal BMI.
+
+# Project 3: Digital Clock
+
+```
+// const clock = document.querySelector('#clock');
+const clock = document.getElementById('clock');
+
+setInterval(function () {
+  let date = new Date();
+  clock.innerHTML = date.toLocaleTimeString();
+}, 1000);
+```
+This code selects the clock element and uses the setInterval function to update the clock every second.
+It gets the current date and time using the Date object and sets the innerHTML of the clock element
+to the current time in the format of the locale time string.
