@@ -54,20 +54,17 @@
                 console.log('google clicked')
         }, false);
 
-        document.querySelector('#images').addEventListener('click',function(e){
+        document.querySelector('#images').addEventListener('click', function (e) {
                 // console.log(e.target.parentNode);
                 console.log(e.target.tagName);
-                console.log(e.target.id);                
-                
-                if(e.target.tagName === 'IMG'){
-                let removeItem = e.target.parentNode;
-                removeItem.remove();
+                console.log(e.target.id);
+                if (e.target.tagName === 'IMG') {
+                        let removeItem = e.target.parentNode;
+                        removeItem.remove();
                 }
-
                 // console.log( removeItem.parentNode);
-                // removeItem.parentNode.removeChild(removeItem);                
-                
-        })
+                // removeItem.parentNode.removeChild(removeItem);                     
+        });
 </script>
 
 </html>
