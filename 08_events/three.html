@@ -15,17 +15,14 @@
 <script>
     const hi = function (str) {
         console.log(`Hello, ${str}`, Date.now());
-
     }
     let interval;
     document.querySelector('#start').addEventListener('click', () => interval = setInterval(hi, 1000, 'Srk'));
     document.querySelector('#stop').addEventListener('click', () => {
         clearInterval(interval),
         console.log('Stopped')
-    }
-    );
+    });
     // const interval=setInterval(hi,1000,'srk')
     // clearInterval(interval)
 </script>
-
 </html>

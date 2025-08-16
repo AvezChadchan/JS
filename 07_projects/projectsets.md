@@ -174,3 +174,61 @@ function newGame() {
   });
 }
 ```
+
+# Project 5: Key Press Event 
+
+```
+const insert = document.getElementById('insert');
+window.addEventListener('keydown', (e) => {
+  insert.innerHTML = `
+  <div class='color'>
+  <table>
+  <tr>
+    <th>Key</th>
+    <th>KeyCode</th>
+    <th>Code</th>
+  </tr>
+  <tr>
+    <td>${e.key === ' ' ? 'Space' : e.key}</td>
+    <td>${e.keyCode}</td>
+    <td>${e.code}</td>
+  </tr>
+</table>
+  </div>
+  `;
+});
+```
+
+# Project 6 : Color Changer 
+
+```
+const randomColor = function () {
+  const hex = '0123456789ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i++) {
+    color += hex[Math.floor(Math.random() * 16)];
+  }
+  return color;
+};
+let interval;
+const startChangingColor = function () {
+  if (!interval) {
+    interval = setInterval(changeColor, 1000);
+  }
+  function changeColor() {
+    const bodyStyle = document.body.style;
+    bodyStyle.backgroundColor = randomColor();
+    bodyStyle.color = randomColor();
+  }
+};
+const stopChangingColor = function () {
+  clearInterval(interval);
+  interval = null;
+};
+// const start = document.querySelector('#start')
+// const stop = document.// const start = document.   ('#start')querySelector('#stop');
+// start.addEventListener('click', startChangingColor);
+// stop.addEventListener('click', stopChangingColor);
+document.querySelector('#start').addEventListener('click', startChangingColor);
+document.querySelector('#stop').addEventListener('click', stopChangingColor);
+```
