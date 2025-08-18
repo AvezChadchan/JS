@@ -32,22 +32,23 @@
             const img = data.avatar_url;
             let followers = data.followers;
             let followings = data.following;
-            const mybtn = document.createElement('button');
-            mybtn.innerText = 'Show Data';
-            document.body.appendChild(mybtn);
-            mybtn.addEventListener('click', function () {
-                const card = document.querySelector('.card');
-                const avatar = document.createElement('img');
-                avatar.src = img;
-                avatar.style.height = "150px";
-                avatar.style.borderRadius = "14px";
-                card.querySelector('h4').innerText = `Followers : ${followers} \t Following: ${followings}`;
-                card.style.border = '3px solid white'
-                if (!card.querySelector('img')) {
-                    card.insertBefore(avatar, card.querySelector('h4'));
-                    console.log('Data Showed!!');
-                }
-            });
+            // console.log(followers,followings);            
+            // const mybtn = document.createElement('button');
+            // mybtn.innerText = 'Show Data';
+            // document.body.appendChild(mybtn);
+            // mybtn.addEventListener('click', function () {
+            //     const card = document.querySelector('.card');
+            //     const avatar = document.createElement('img');
+            //     avatar.src = img;
+            //     avatar.style.height = "150px";
+            //     avatar.style.borderRadius = "14px";
+            //     card.querySelector('h4').innerText = `Followers : ${followers} \t Following: ${followings}`;
+            //     card.style.border = '3px solid white'
+            //     if (!card.querySelector('img')) {
+            //         card.insertBefore(avatar, card.querySelector('h4'));
+            //         console.log('Data Showed!!');
+            //     }
+            // });
             // console.log(typeof data); the reponse text is always in string
             // avatar.innerHTML = `<img src = ${img} style = "height:150px;border-radius : 15px"></img> `;
             // document.querySelector('h2').innerText = followers;
