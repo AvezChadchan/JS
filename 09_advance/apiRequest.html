@@ -20,46 +20,39 @@
 </body>
 <script>
     const requestURL = 'https://api.github.com/users/AvezChadchan';
-
     const xhr = new XMLHttpRequest();
-
     xhr.open('GET', requestURL);
-
     xhr.onreadystatechange = function () {
-        console.log(xhr.readyState);
+        // console.log(xhr.readyState);
 
         if (xhr.readyState === 4) {
+            // console.log(this.responseText);
             const data = JSON.parse(this.responseText);
-            // document.querySelector('div').innerHTML = this.responseText;
-            // console.log(typeof data); the reponse text is always in string
-            // console.log(data.following);
+            // console.log(data);
+            const img = data.avatar_url;
             let followers = data.followers;
             let followings = data.following;
-            // console.log(followings);
-
-            const img = data.avatar_url;
-
             const mybtn = document.createElement('button');
-            mybtn.innerText = 'Show Data'
+            mybtn.innerText = 'Show Data';
             document.body.appendChild(mybtn);
-
             mybtn.addEventListener('click', function () {
                 const card = document.querySelector('.card');
                 const avatar = document.createElement('img');
-                // avatar.innerHTML = `<img src = ${img} style = "height:150px;border-radius : 15px"></img> `;
                 avatar.src = img;
                 avatar.style.height = "150px";
                 avatar.style.borderRadius = "14px";
                 card.querySelector('h4').innerText = `Followers : ${followers} \t Following: ${followings}`;
                 card.style.border = '3px solid white'
                 if (!card.querySelector('img')) {
-                    card.insertBefore(avatar, card.querySelector('h4'))
+                    card.insertBefore(avatar, card.querySelector('h4'));
+                    console.log('Data Showed!!');
                 }
-                // document.querySelector('h2').innerText = followers;
             });
+            // console.log(typeof data); the reponse text is always in string
+            // avatar.innerHTML = `<img src = ${img} style = "height:150px;border-radius : 15px"></img> `;
+            // document.querySelector('h2').innerText = followers;
         }
     }
-
     xhr.send();
 </script>
 
