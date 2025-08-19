@@ -92,6 +92,8 @@ consumePromiseFieve()
 //     }
 // }
 // getAllUsers()
+
+
 //fetch
 fetch("https://api.github.com/users/AvezChadchan")
     .then((response) => {
