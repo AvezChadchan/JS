@@ -78,3 +78,26 @@ async function consumePromiseFieve() {
     }
 }
 consumePromiseFieve()
+
+//
+// async function getAllUsers() {
+//     try {
+//         const response = await fetch("https://jsonplaceholder.typicode.com/users");
+//         // console.log(response);
+//         const data = await response.json()
+//         console.log(data);
+//     } catch (error) {
+//         console.log(error);
+
+//     }
+// }
+// getAllUsers()
+//fetch
+fetch("https://api.github.com/users/AvezChadchan")
+    .then((response) => {
+        return response.json();
+    })
+    .then((data) => console.log(data),
+    )
+    .catch((e) => console.log(e)
+    )
