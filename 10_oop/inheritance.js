@@ -21,3 +21,13 @@ class Teacher extends User {
 const obj = new Teacher('srk','srk@gmail.com','1234');
 // console.log(obj);
 obj.addCourse()
+const obj2= new User('buddy');
+// obj2.addCourse()//no
+// obj2.logMe()
+// console.log(obj2===obj); //false
+// console.log(obj2 === Teacher);//false
+// console.log(obj2===User);//false
+console.log(obj2 instanceof User);//true
+console.log(obj2 instanceof Teacher);//false
+console.log(obj instanceof Teacher);//false
+console.log(obj instanceof User);//true
