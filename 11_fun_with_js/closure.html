@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+</body>
+<script>
+    // //lexical scooping
+    // function init(){
+    //     let name = 'Mozilla';
+    //     console.log(hi); //can't access inner functions variables
+        
+    //     function displayName(){
+    //         let hi=12; 
+    //         console.log(name); //can access outer functions variables
+    //     }
+    //     function displayNameTwo(){
+    //         console.log(name);
+    //         console.log(hi); //this function cannot access sibling functions variables
+            
+    //     }
+    //     displayName()
+    // }
+    // init();
+
+    //closure:- returning  whole lexical scope of that function not just the execution context
+    
+    // function makeFunc() {
+    //     const name = "Mozilla";
+    //     function displayName() {
+    //         console.log(name);
+    //     }
+    //     return displayName;
+    // }
+
+    // const myFunc = makeFunc();
+    // myFunc();
+</script>
+<script>
+    function clickHandler(color){
+        // document.body.style.backgroundColor=`${color}`;
+        return function(){ //can access color property bcuz it is closure
+        document.body.style.backgroundColor=`${color}`;
+        }
+    }
+    document.getElementById('green').onclick=clickHandler('green');
+    document.getElementById('orange').onclick=clickHandler('orange');
+</script>
+</html>
